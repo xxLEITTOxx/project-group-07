@@ -1,0 +1,51 @@
+<section class="contacts-section section">
+  <div class="container contacts-container">
+    <h2 class="contacts-title">Contact Us</h2>
+    <div class="contacts-content">
+      <p class="contacts-descr">
+        Please use the form below to contact us. Enter your name, email, phone,
+        and message and we'll get back to you shortly.
+      </p>
+      <form class="main-form">
+        <label for="user-name" class="visually-hidden">Name</label>
+        <input
+          name="user-name"
+          id="user-name"
+          placeholder="Name"
+          type="text"
+          class="main-form-input"
+          required
+        />
+        <label for="user-email" class="visually-hidden">Email</label>
+        <input
+          name="user-email"
+          id="user-email"
+          placeholder="Email"
+          pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+          type="email"
+          class="main-form-input"
+          required
+        />
+        <label for="user-tel" class="visually-hidden">Phone</label>
+        <input
+          name="user-tel"
+          id="user-tel"
+          placeholder="+380"
+          pattern="^\+\d{3}-\d{2}-\d{3}-\d{2}-\d{2}$"
+          type="tel"
+          class="main-form-input"
+          required
+        />
+        <label for="user-comment" class="visually-hidden">Comment</label>
+        <textarea
+          name="user-comment"
+          id="user-comment"
+          class="main-form-user-comment"
+          placeholder="Comment"
+          required
+        ></textarea>
+        <button class="main-form-btn" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
