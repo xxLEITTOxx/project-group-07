@@ -1,3 +1,133 @@
-/* body {
-    font-size: 500;
-} */
+.hero {
+    min-width: 335px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #FFFFFF;
+}
+.hero-title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    color: #0C0C0C;
+}
+.hero-tab-box{
+    margin-bottom: 28px;
+}
+.hero-title-word {
+    color: #3350E9;
+}
+.hero-text {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    line-height: 1.29;
+    color: rgba(12, 12, 12, 0.7);
+}
+.hero-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    position: relative;
+}
+.hero-foto-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.hero-foro-item2 {
+    position: absolute;
+    z-index: 1;
+}
+.hero-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    color: #0C0C0C;
+}
+.hero-link:hover,
+.hero-link:focus {
+    color: #3350E9;
+}
+.hero-img {
+    border-radius: 30px;
+    background: rgba(12, 12, 12, 0.2);
+}
+
+@media (min-width:768px) {
+    .container {
+        padding: 0 32px;
+        margin: 0 auto;
+    }
+    .hero {
+        min-width: 704px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .hero-box-content {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 40px;
+        justify-content: space-between;
+    }
+    .hero-tab-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0px;
+    }
+    .hero-title {
+        max-width: 557px;
+        font-size: 70px;
+        line-height: 0.86;
+    }
+    .hero-text {
+        max-width: 480px;
+        font-size: 16px;
+        line-height: 1.25;
+        margin-bottom: 0;
+    }
+    .hero-box {
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
+    .hero-link {
+        font-size: 20px;
+        line-height: 1;
+    }
+    .hero-foto-icon {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+@media (min-width:1280px) {
+    .container {
+        padding: 0px 65px;
+    }
+    .hero {
+        min-width: 1150px;
+    }
+    .hero-tab-box {
+        max-width: 597px;
+    }
+    .hero-title {
+        font-size: 72px;
+        line-height: 0.87;
+    }
+    .hero-box-content {
+        justify-content: space-between;
+        margin-bottom: 94px;
+    }
+    .hero-foto-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
