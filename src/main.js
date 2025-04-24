@@ -33,3 +33,57 @@ document.addEventListener('click', event => {
     closeMenu();
   }
 });
+
+// --- Логика для активной ссылки навигации при скролле (пример) ---
+const sections = document.querySelectorAll('main section[id]');
+const navLinks = document.querySelectorAll('.nav-link'); // Выбираем все ссылки навигации (десктоп и мобильные)
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  // Начинаем проверку с hero
+  const heroSection = document.getElementById('hero');
+  if (
+    window.pageYOffset <
+    heroSection.offsetTop + heroSection.offsetHeight - window.innerHeight / 3
+  ) {
+    current = 'hero';
+  } else {
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      // Уменьшаем trigger point, чтобы ссылка активировалась раньше
+      const sectionTriggerPoint = sectionTop - window.innerHeight / 3;
+
+      if (window.pageYOffset >= sectionTriggerPoint) {
+        current = section.getAttribute('id');
+      }
+    });
+  }
+
+  // Особый случай для футера (ссылка Scroll Down ведет сюда)
+  const footer = document.getElementById('footer');
+  if (
+    window.innerHeight + window.pageYOffset >=
+    document.body.offsetHeight - 50
+  ) {
+    // Если почти внизу страницы
+    current = 'footer'; // Технически не секция, но для ссылки 'Scroll Down'
+  }
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    // Проверяем href.
+    const linkHref = link.getAttribute('href').substring(1);
+
+    if (linkHref === current) {
+      // Исключаем подсветку "Scroll Down" как активного пункта меню
+      // Исключаем подсветку ссылок в мобильном меню и футере
+      if (
+        linkHref !== 'footer' &&
+        !link.classList.contains('mobile-nav-link') &&
+        !link.closest('.footer-nav-list')
+      ) {
+        link.classList.add('active');
+      }
+    }
+  });
+});
