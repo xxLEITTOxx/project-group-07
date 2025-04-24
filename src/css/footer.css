@@ -1,3 +1,71 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 .footer {
   padding: 20px 0;
+  background-color: rgba(12, 12, 12, 1);
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+.container {
+  padding: 28px 40px;
+}
+.body {
+  box-sizing: border-box;
+  margin: 0px;
+}
+.logo-socials > p {
+font-family: "Gilroy";
+font-weight: 500;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: -2%;
+color: rgba(251, 251, 251, 1);
+}
+.Phone > P {
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0 auto;
+  color: rgba(251, 251, 251, 1);
+
+}
+a {
+  text-decoration: none;
+  color: rgba(251, 251, 251, 1);
+}
+.Phone {
+  width: 152px;
+  height: 44px;
+  border: solid 1px rgba(251, 251, 251, 0.2);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+}
+.txt > p {
+  font-family: "Gilroy";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.2;
+  text-align: center;
+  color: rgba(251, 251, 251, 1);
+}
+.txt{
+  margin-top: 40px;
+}
+.Phone {
+  margin-top: 20px;
 }
