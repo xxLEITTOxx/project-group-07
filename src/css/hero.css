@@ -112,10 +112,8 @@
         min-width: 1150px;
         padding-bottom: 50px;
     }
-    .hero-tab-box {
-        max-width: 597px;
-    }
     .hero-title {
+        max-width: 597px;
         font-size: 72px;
         line-height: 0.87;
     }
