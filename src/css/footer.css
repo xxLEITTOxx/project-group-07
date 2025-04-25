@@ -30,7 +30,7 @@ line-height: 100%;
 letter-spacing: -2%;
 color: rgba(251, 251, 251, 1);
 }
-.Phone > P {
+.button-phone {
   font-family: "Gilroy";
   font-weight: 500;
   font-size: 12px;
