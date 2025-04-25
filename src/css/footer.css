@@ -1,3 +1,150 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 .footer {
-  padding: 20px 0;
+  background-color: rgba(12, 12, 12, 1);
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+.container {
+  padding: 40px 28px;
+}
+.body {
+  box-sizing: border-box;
+  margin: 0px;
+}
+.logo-socials > p {
+font-family: "Gilroy";
+font-weight: 500;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: -2%;
+color: rgba(251, 251, 251, 1);
+}
+.Phone > P {
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0 auto;
+  color: rgba(251, 251, 251, 1);
+
+}
+a {
+  text-decoration: none;
+  color: rgba(251, 251, 251, 1);
+}
+
+.txt > p {
+  font-family: "Gilroy";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.2;
+  text-align: center;
+  color: rgba(251, 251, 251, 1);
+}
+.txt{
+  margin-top: 40px;
+}
+.Phone {
+  margin-top: 20px;
+}
+.meida-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.footer-information {
+  margin-bottom: 92px;
+}
+.footer-menu > div > a {
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: rgba(251, 251, 251, 1);
+}
+.footer-menu > div > p {
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: rgba(251, 251, 251, 1);
+}
+.footer-menu {
+  display: flex;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.year {
+  padding-left: 49px;
+}
+.line-block {
+width: 100%;
+height: 1px;
+background-color: rgba(251, 251, 251, 0.1);
+margin: 24px 0px;
+}
+.last-text-footer {
+  font-family:"Gilroy";
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: -0.2;
+  color:rgba(251, 251, 251, 0.5) ;
+}
+.dop {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+}
+.icon {
+  fill: rgba(251, 251, 251, 1);
+}
+.button-icon {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: solid 1px rgba(251, 251, 251, 0.1);
+}
+.button-phone {
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: center;
+  color: rgba(251, 251, 251, 1);
+  background-color: transparent;
+  width: 152px;
+  height: 44px;
+  border: solid 1px rgba(251, 251, 251, 0.2);
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
