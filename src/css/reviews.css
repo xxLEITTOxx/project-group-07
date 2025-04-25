@@ -1,0 +1,121 @@
+/*Mobile styles */
+.reviews-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.section-header {
+    top: 0;
+    left: 0;
+    
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #0c0c0c;
+    margin-bottom: 24px;
+}
+
+.reviews-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.reviews-item {
+    border-radius: 30px;
+    width: 335px;
+    height: 262px;
+    background-color: #f3f3f3;
+
+    flex: none;
+    scroll-snap-align: start;
+    text-align: center;
+}
+
+.review-card {
+    padding: 32px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-image {
+    margin-bottom: 24px;
+}
+
+.review-card-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #0c0c0c;
+    margin-bottom: 8px;
+}
+
+.review-card-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: rgba(12, 12, 12, 0.4);
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+
+    .reviews-section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .section-header {
+        font-size: 48px;
+        line-height: 0.9;
+        margin-bottom: 40px;
+    }
+
+    /*.reviews-list {
+        gap: 16px;
+    }*/
+
+    .reviews-item {
+        width: calc((100% - 16px) / 2);
+        height: 272px;
+    }
+
+    .review-card-title {
+        font-size: 18px;
+        line-height: 1.1;
+    }
+
+    .review-card-text {
+        font-size: 16px;
+        line-height: 1.25;
+    }
+}
+
+/*Desctop styles */
+@media screen and (min-width: 1280px) {
+    .reviews-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .reviews-list {
+        gap: 20px;
+        overflow-x: hidden;
+    }
+
+    .reviews-item {
+        width: calc((100% - 40px) / 3);
+        
+    }
+}
