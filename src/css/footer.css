@@ -1,15 +1,5 @@
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-ul, ol {
-  margin: 0;
-  padding: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
 .footer {
+<<<<<<< HEAD
   background-color: rgba(12, 12, 12, 1);
   width: 100%;
   height: auto;
@@ -160,4 +150,7 @@ margin: 24px 0px;
 .button-phone:hover {
   background-color: rgba(251, 251, 251, 1);
   color: rgba(12, 12, 12, 1);
+=======
+  padding: 20px 0;
+>>>>>>> 997de244e89340f79f7e36f8a7d0005a4558399c
 }

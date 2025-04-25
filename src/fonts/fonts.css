@@ -33,3 +33,21 @@
     font-weight: 500;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('Gilroy-Semibold.eot');
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+        url('Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('Gilroy-Semibold.woff2') format('woff2'),
+        url('Gilroy-Semibold.woff') format('woff'),
+        url('Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    font-family: "Gilroy", sans-serif;
+    letter-spacing: -0.02em;
+    color: #0c0c0c;
+}
