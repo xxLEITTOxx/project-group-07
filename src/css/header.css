@@ -1,44 +1,308 @@
-.header {
-  padding: 20px 0;
+/* --- Header --- */
+.site-header {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
-.nav {
+
+.header-container {
   display: flex;
   justify-content: space-between;
-}
-.nav-logo {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
 }
-.nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
-}
-.nav-link {
-  position: relative;
-  display: block;
+
+.logo {
   font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: 200ms ease-in;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  flex-shrink: 0; /* Не сжимать логотип */
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
+
+.desktop-nav-wrapper {
+  display: none; /* Скрыто по умолчанию */
+  flex-grow: 1; /* Занимает пространство между лого и соц. иконками */
 }
-.nav-link::after {
+
+.desktop-nav-list {
+  display: flex;
+  gap: 1.5rem; /* space-x-6 */
+}
+
+/* Стили для элемента списка навигации */
+.desktop-nav-list li {
+  position: relative; /* Для позиционирования точки */
+  white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.desktop-nav-list .nav-link {
+  display: block; /* Чтобы ::after позиционировался относительно ссылки */
+  padding-bottom: 10px; /* Добавляем место для точки снизу */
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  position: relative; /* Для позиционирования псевдоэлемента */
+}
+/* Убираем изменение цвета при наведении/фокусе */
+.desktop-nav-list .nav-link:hover,
+.desktop-nav-list .nav-link:focus {
+  color: #0c0c0c; /* Цвет остается прежним */
+}
+
+/* Стили для активной точки */
+.desktop-nav-list .nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 0; /* Позиция под текстом */
   left: 50%;
-  transform: translateX(-50%) translateY(100%);
-  width: 110%;
-  height: 4px;
-  border-radius: 4px;
-  transform-origin: center;
-  animation: stretch 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms both;
+  transform: translateX(-50%);
+  width: 9px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 9 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4.5' cy='4' r='4' fill='%233350E9' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0; /* Скрыта по умолчанию */
+  transition: opacity 0.3s ease;
 }
-.nav-link.active::after {
-  background: #747bff;
+
+.desktop-nav-list .nav-link.active::after {
+  opacity: 1; /* Показываем точку для активной ссылки */
+}
+
+.desktop-social-list {
+  display: none; /* Скрыто по умолчанию */
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.social-icon {
+  display: inline-block;
+  transition: background-color 0.3s ease; /* Плавный переход для фона */
+  color: #0c0c0c; /* Цвет иконки по умолчанию */
+}
+
+.social-icon-svg:hover,
+.social-icon-svg:focus {
+  fill: #3350e9; /* Изменяем цвет иконки при наведении */
+  transition: fill 0.3s ease; /* Плавный переход для цвета */
+  border: 1px solid rgba(51, 80, 233, 0.1); /* Легкий бордер при наведении */
+}
+
+.social-icon-svg {
+  border: 1px solid rgba(12, 12, 12, 0.1);
+  border-radius: 10px;
+  padding: 8px;
+  width: 36px;
+  height: 36px;
+}
+
+/* Mobile/Tablet Menu Button */
+.menu-toggle {
+  color: #374151; /* gray-700 */
+  display: block; /* Показываем по умолчанию */
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  color: #3350e9;
+}
+.menu-toggle svg {
+  width: 1.5rem; /* w-6 */
+  height: 1.5rem; /* h-6 */
+}
+
+/* --- Mobile/Tablet Menu Panel --- */
+.mobile-menu {
+  position: fixed;
+  top: 0; /* Прикрепляем к верху экрана */
+  bottom: 0; /* Занимает всю высоту */
+  right: 0; /* Прикрепляем к правому краю */
+  z-index: 50;
+  overflow-y: auto;
+  width: 200px;
+  height: 100%;
+  background: rgba(12, 12, 12, 0.92) url('../img/menu/modal-menu-back.jpg')
+    no-repeat center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центрируем содержимое по вертикали */
+  align-items: center; /* Центрируем содержимое по горизонтали */
+}
+@media (min-width: 640px) {
+  /* sm */
+  .mobile-menu {
+    width: 16rem; /* w-64 */
+  }
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem; /* mb-8 */
+}
+.mobile-menu .logo {
+  color: white;
+}
+.menu-close {
+  color: white;
+  position: absolute; /* Абсолютное позиционирование */
+  top: 26px; /* Отступ от верхнего края */
+  right: 32px; /* Отступ от правого края */
+  cursor: pointer; /* Указатель при наведении */
+  z-index: 60;
+  border: none;
+  background: none;
+}
+.menu-close:hover,
+.menu-close:focus {
+  color: #d1d5db; /* gray-300 */
+}
+.menu-close svg {
+  width: 34px; /* Размер иконки */
+  height: 34px; /* Размер иконки */
+}
+
+.mobile-menu-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+}
+.mobile-menu-nav .nav-link {
+  color: white;
+  transition: color 0.3s ease;
+  position: relative; /* Для позиционирования точки */
+}
+.mobile-menu .mobile-nav-link:hover,
+.mobile-menu .mobile-nav-link:focus {
+  color: #d1d5db; /* gray-300 */
+}
+
+.mobile-menu-nav .nav-link.active::after {
+  content: ''; /* Точка для текущей ссылки */
+  position: absolute;
+  bottom: -8px; /* Располагаем точку под текстом */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #3350e9; /* Цвет точки */
+  border-radius: 50%;
+}
+
+.mobile-social-list {
+  position: absolute;
+  bottom: 32px; /* Располагаем внизу */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10px;
+}
+.mobile-social-list .social-icon {
+  color: #d1d5db;
+  transition: color 0.3s ease;
+}
+.mobile-social-list .social-icon svg {
+  border: 1px solid rgba(251, 251, 251, 0.1);
+  border-radius: 10px;
+  padding: 8px;
+  width: 36px;
+  height: 36px;
+  fill: currentColor;
+  transition: fill 0.3s ease;
+}
+.mobile-social-list .social-icon:hover,
+.mobile-social-list .social-icon:focus {
+  color: white; /* gray-300 */
+}
+
+/* ==========================================================================
+           Планшетные стили (от 768px)
+           ========================================================================== */
+@media screen and (min-width: 768px) {
+  .site-header {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  .logo {
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  .mobile-menu {
+    width: 330px;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .mobile-menu-nav {
+    gap: 32px;
+  }
+
+  .menu-close svg {
+    width: 40px; /* Размер иконки */
+    height: 40px; /* Размер иконки */
+  }
+}
+
+/* ==========================================================================
+           Десктопные стили (от 1280px)
+           ========================================================================== */
+@media screen and (min-width: 1280px) {
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 203px;
+  }
+
+  .desktop-nav-wrapper {
+    display: flex;
+    justify-content: center; /* Центрируем список внутри */
+  }
+
+  .desktop-nav-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .desktop-social-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .menu-toggle {
+    display: none; /* Скрываем на lg */
+  }
 }
