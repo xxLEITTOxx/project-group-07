@@ -53,6 +53,7 @@
     letter-spacing: -0.02em;
     text-decoration: underline;
     color: #0C0C0C;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-link:hover,
 .hero-link:focus {
@@ -112,10 +113,8 @@
         min-width: 1150px;
         padding-bottom: 50px;
     }
-    .hero-tab-box {
-        max-width: 597px;
-    }
     .hero-title {
+        max-width: 597px;
         font-size: 72px;
         line-height: 0.87;
     }
