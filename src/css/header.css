@@ -130,8 +130,8 @@
   overflow-y: auto;
   width: 200px;
   height: 100%;
-  background: rgba(12, 12, 12, 0.92) url('../img/menu/modal-menu-back.jpg')
-    no-repeat center center;
+  background: rgba(12, 12, 12, 0.92)
+    url('../img/menu/modal-menu-back-mob-tab.jpg') no-repeat center center;
   background-size: cover;
   background-blend-mode: overlay;
   transform: translateX(100%);
@@ -141,6 +141,13 @@
   justify-content: center; /* Центрируем содержимое по вертикали */
   align-items: center; /* Центрируем содержимое по горизонтали */
 }
+
+@media (min-resolution: 2x) {
+  .mobile-menu {
+    background-image: url('../img/menu/modal-menu-back-mob-tab@2x.jpg');
+  }
+}
+
 @media (min-width: 640px) {
   /* sm */
   .mobile-menu {
@@ -191,6 +198,10 @@
   color: white;
   transition: color 0.3s ease;
   position: relative; /* Для позиционирования точки */
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
 }
 .mobile-menu .mobile-nav-link:hover,
 .mobile-menu .mobile-nav-link:focus {
@@ -200,7 +211,7 @@
 .mobile-menu-nav .nav-link.active::after {
   content: ''; /* Точка для текущей ссылки */
   position: absolute;
-  bottom: -8px; /* Располагаем точку под текстом */
+  bottom: -10px; /* Располагаем точку под текстом */
   left: 50%;
   transform: translateX(-50%);
   width: 8px;
@@ -304,5 +315,15 @@
 
   .menu-toggle {
     display: none; /* Скрываем на lg */
+  }
+
+  .mobile-menu {
+    background-image: url('../img/menu/modal-menu-back.jpg');
+  }
+
+  @media (min-resolution: 2x) {
+    .mobile-menu {
+      background-image: url('../img/menu/modal-menu-back-desk@2x.jpg');
+    }
   }
 }
