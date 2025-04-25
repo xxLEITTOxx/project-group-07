@@ -18,11 +18,11 @@ ul, ol {
 .container {
   padding: 40px 28px;
 }
-.body {
+body {
   box-sizing: border-box;
   margin: 0px;
 }
-.logo-socials > p {
+.logo {
 font-family: "Gilroy";
 font-weight: 500;
 font-size: 16px;
@@ -46,7 +46,7 @@ a {
   color: rgba(251, 251, 251, 1);
 }
 
-.txt > p {
+.text-txt {
   font-family: "Gilroy";
   font-weight: 600;
   font-size: 20px;
@@ -70,7 +70,7 @@ a {
 .footer-information {
   margin-bottom: 92px;
 }
-.footer-menu > div > a {
+.link-button {
   font-family: "Gilroy";
   font-weight: 500;
   font-size: 12px;
@@ -78,7 +78,7 @@ a {
   letter-spacing: 0;
   color: rgba(251, 251, 251, 1);
 }
-.footer-menu > div > p {
+.year-text{
   font-family: "Gilroy";
   font-weight: 500;
   font-size: 12px;
@@ -88,6 +88,7 @@ a {
 }
 .footer-menu {
   display: flex;
+  justify-content: space-between;
 }
 .menu {
   display: flex;
@@ -160,4 +161,98 @@ margin: 24px 0px;
 .button-phone:hover {
   background-color: rgba(251, 251, 251, 1);
   color: rgba(12, 12, 12, 1);
+}
+.link-button {
+  position: relative;
+  display: inline-block;
+}
+.link-button::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+
+  background-color: rgba(51, 80, 233, 1);
+  bottom: -11px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.link-button:hover::before  {
+  opacity: 1;
+}
+@media (min-width:768px) and (max-width:1280px) {
+  .footer-information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .text-txt {
+  padding: 0px 50px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 32px;
+
+  }
+  .txt {
+    margin-top: 86px;
+  }
+  .footer-information {
+    margin-bottom: 100px;
+  }
+  .link-button{
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .year-text {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0;
+    width: 162px;
+  }
+  .menu {
+    gap: 19px;
+  }
+  .line-block {
+    margin: 28px 0px;
+  }
+  .footer-opac {
+    display: flex;
+    justify-content: space-between;
+  }
+  .dop {
+    margin: 0px;
+  }
+  .last-text-footer {
+font-size: 14px;
+line-height: 18px;
+font-weight: 500;
+letter-spacing: -0.2;
+  }
+  .logo {
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: -0.2;
+  }
+  .button-phone {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0;
+    font-weight: 500;
+
+  }
+  .link-button::before {
+    bottom: 0px;
+  }
+  .footer {
+    margin: 40px 0px;
+  }
+  body {
+  padding: 0px 36px;
+}
+  .Phone {
+  margin: 0px;
+  }
 }
