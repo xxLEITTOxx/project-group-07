@@ -92,10 +92,34 @@
   .catalog-btn {
     display: none;
   }
+  .catalog-list {
+    flex-direction: row;
+    gap: 32px 16px;
+  }
+  .catalog-wiewport {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  .catalog-list-item {
+    max-width: 344px;
+    width: 100%;
+    height: 414px;
+  }
 }
-
 @media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
   .catalog-btn {
     display: none;
+  }
+  .catalog-list-item {
+    max-width: 368px;
+    width: 100%;
+    height: 414px;
+    padding: 24px 32px;
+  }
+  .catalog-list {
+    gap: 32px 23px;
   }
 }
