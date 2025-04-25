@@ -7,17 +7,101 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css" />
     <title>WatchCharm</title>
     <script type="module" crossorigin src="/project-group-07/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/project-group-07/assets/index-D40HPtZ4.css">
+    <link rel="stylesheet" crossorigin href="/project-group-07/assets/index-DaX5umcU.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
+    <header class="site-header">
+  <div class="container header-container">
+    <a href="#" class="logo">watchcharm</a>
+
+    <nav class="desktop-nav-wrapper">
+      <ul class="desktop-nav-list">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#catalog" class="nav-link">Catalog</a></li>
+        <li><a href="#sale" class="nav-link">Sale</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <ul class="desktop-social-list">
+      <li>
+        <a href="https://www.facebook.com/goITclub/" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <svg class="social-icon-svg" width="7" height="15" xmlns="http://www.w3.org/2000/svg">
+            <use href="/project-group-07/assets/sprite-B5e53i7N.svg#facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/goitclub/" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <svg class="social-icon-svg" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+            <use href="/project-group-07/assets/sprite-B5e53i7N.svg#instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/c/GoIT" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <svg class="social-icon-svg" width="19" height="14" xmlns="http://www.w3.org/2000/svg">
+            <use href="/project-group-07/assets/sprite-B5e53i7N.svg#youtube"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <button id="menu-toggle" class="menu-toggle">
+      <svg class="icon" width="40" height="40">
+        <use href="/project-group-07/assets/sprite-B5e53i7N.svg#menu-top"></use>
+      </svg>
+    </button>
   </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-header">
+      <button id="menu-close" class="menu-close">
+        <svg class="icon" width="40" height="40">
+          <use href="/project-group-07/assets/sprite-B5e53i7N.svg#menu-close"></use>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu-nav">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About Us</a>
+      <a href="#catalog" class="nav-link">Catalog</a>
+      <a href="#sale" class="nav-link">Sale</a>
+      <a href="#reviews" class="nav-link">Reviews</a>
+      <a href="#contact" class="nav-link">Contact Us</a>
+    </nav>
+    <ul class="mobile-social-list">
+      <li>
+        <a href="https://www.facebook.com/goITclub/" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <svg class="social-icon-svg" width="7" height="15" xmlns="http://www.w3.org/2000/svg">
+            <use href="/project-group-07/assets/sprite-B5e53i7N.svg#facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/goitclub/" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <svg class="social-icon-svg" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+            <use href="/project-group-07/assets/sprite-B5e53i7N.svg#instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/c/GoIT" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <svg class="social-icon-svg" width="19" height="14" xmlns="http://www.w3.org/2000/svg">
+            <use href="/project-group-07/assets/sprite-B5e53i7N.svg#youtube"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+
 </header>
 
     <main>
       <!-- Loads the specified .html file -->
-    <section class="hero">
+    <section class="hero" id="hero" >
     <div class="container">
         <div class="hero-box-content">
             <div class="hero-tab-box">
@@ -50,7 +134,34 @@
         </picture>
     </div>
 </section>
-    
+    <section id="about" class="section-about">
+  <div class="container about-container">
+    <div class="about-content">
+      <h2 class="about-title">About Us</h2>
+      <p class="about-text">
+        Welcome to our premium watch collection, where luxury and style meet
+        functionality and precision. Our selection of timepieces embodies the
+        very best in Swiss craftsmanship and engineering, ensuring that you'll
+        always have a reliable and stylish accessory on your wrist.
+      </p>
+      <p class="about-text">
+        At our premium watch collection, we believe that a watch is more than
+        just a timekeeping device – it's a statement piece that reflects your
+        personality and style. So why settle for anything less than the best?
+      </p>
+      <a href="#catalog" class="btn-about">View catalog</a>
+    </div>
+    <div class="img-about-box">
+      <img
+        srcset="../img/adout/about-mob-min.jpg, ../img/adout/about-mob@2x-min.jpg"
+        src="../img/adout/about-mob-min.jpg"
+        alt="Black wristwatch"
+        class="img-about"
+      />
+    </div>
+  </div>
+</section>
+
     
     <section class="advertisement" id="advertisement">
   <div class="container advertisement-contentainer">
@@ -68,7 +179,79 @@
 
     
     
-    
+    <section class="contacts-section section" id="contact" >
+  <div class="container contacts-container">
+    <h2 class="contacts-title">Contact Us</h2>
+    <div class="contacts-content-wrap">
+      <div class="contacts-content">
+        <p class="contacts-descr">
+          Please use the form below to contact us. Enter your name, email,
+          phone, and message and we'll get back to you shortly.
+        </p>
+        <form class="main-form">
+          <label for="user-name" class="visually-hidden">Name</label>
+          <input
+            name="user-name"
+            id="user-name"
+            placeholder="Name"
+            type="text"
+            class="main-form-input"
+            required
+          />
+          <label for="user-email" class="visually-hidden">Email</label>
+          <input
+            name="user-email"
+            id="user-email"
+            placeholder="Email"
+            pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+            type="email"
+            class="main-form-input"
+            required
+          />
+          <label for="user-tel" class="visually-hidden">Phone</label>
+          <input
+            name="user-tel"
+            id="user-tel"
+            placeholder="+380"
+            pattern="^\+\d{3}-\d{2}-\d{3}-\d{2}-\d{2}$"
+            type="tel"
+            class="main-form-input"
+            required
+          />
+          <label for="user-comment" class="visually-hidden">Comment</label>
+          <textarea
+            name="user-comment"
+            id="user-comment"
+            class="main-form-user-comment"
+            placeholder="Comment"
+            required
+          ></textarea>
+          <button class="main-form-btn" type="submit">Send</button>
+        </form>
+      </div>
+      <picture>
+        <source
+          srcset="/project-group-07/assets/contact-desk-min-Chl2HQ9G.jpg 1x, /project-group-07/assets/contact-desk@2x-min-B6fIUg9M.jpg 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="/project-group-07/assets/contact-tab-min-D3bc8jAt.jpg 1x, /project-group-07/assets/contact-tab@2x-min-CoPTCcmf.jpg 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="/project-group-07/assets/contact-mob-min-DeSeAdES.jpg 1x, /project-group-07/assets/contact-mob@2x-min-ht6o6CrS.jpg 2x"
+          media="(max-width: 767px)"
+        />
+        <img
+          src="/project-group-07/assets/contact-desk-min-Chl2HQ9G.jpg"
+          alt="Watch image"
+          class="contacts-img"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
     
 
     
