@@ -147,4 +147,17 @@ margin: 24px 0px;
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: color 0.9s ease;
+  transition: background-color 0.5s ease;
+}
+.button-icon .icon {
+  fill: rgba(251, 251, 251, 0.6);
+  transition: fill 0.5s ease;
+}
+.button-icon:hover .icon {
+  fill: rgba(251, 251, 251, 1);
+}
+.button-phone:hover {
+  background-color: rgba(251, 251, 251, 1);
+  color: rgba(12, 12, 12, 1);
 }
