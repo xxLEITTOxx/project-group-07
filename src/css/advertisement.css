@@ -22,6 +22,8 @@ button {
 }
 
 .advertisement {
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .advertisement-contentainer {
@@ -84,6 +86,11 @@ button {
 }
 
 @media only screen and (min-width: 768px) {
+
+  .advertisement {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
   .container {
     max-width: 768px;
   }
@@ -116,6 +123,11 @@ button {
 }
 
 @media only screen and (min-width: 1280px) {
+
+  .advertisement {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   .container {
     max-width: 1280px; 
     padding-left: 65px; 
