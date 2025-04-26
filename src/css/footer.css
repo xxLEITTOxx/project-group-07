@@ -222,7 +222,7 @@ letter-spacing: -0.2;
     margin: 40px 0px;
   }
 
-  .Phone-footer {
+  .phone-footer {
   margin: 0px;
   }
 }
@@ -239,7 +239,7 @@ letter-spacing: -0.2;
       font-weight: 500;
       letter-spacing: -0.2;
     }
-    .Phone-footer {
+    .phone-footer {
       font-size: 14px;
       line-height: 18px;
       font-weight: 500;
@@ -301,7 +301,7 @@ letter-spacing: -0.2;
       .footer {
         margin: 0 auto;
       }
-      .Phone-footer {
+      .phone-footer {
         margin: 0px;
       }
       .button-phone-footer {
