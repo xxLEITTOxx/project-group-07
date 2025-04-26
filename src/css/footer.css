@@ -4,11 +4,13 @@
   width: 100%;
   height: auto;
   border-radius: 30px;
+  max-width: 1216px;
+  margin: 0 auto;
 }
 .footer-container {
   padding: 40px 28px;
 }
-.logo {
+.logo-footer {
 font-family: "Gilroy";
 font-weight: 500;
 font-size: 16px;
@@ -28,7 +30,7 @@ color: rgba(251, 251, 251, 1);
 .txt{
   margin-top: 40px;
 }
-.Phone {
+.Phone-footer {
   margin-top: 20px;
 }
 .meida-social {
@@ -40,7 +42,7 @@ color: rgba(251, 251, 251, 1);
 .footer-information {
   margin-bottom: 92px;
 }
-.link-button {
+.link-button-footer {
   font-family: "Gilroy";
   font-weight: 500;
   font-size: 12px;
@@ -101,7 +103,7 @@ margin: 24px 0px;
   border-radius: 10px;
   border: solid 1px rgba(251, 251, 251, 0.1);
 }
-.button-phone {
+.button-phone-footer{
   font-family: "Gilroy";
   font-weight: 500;
   font-size: 12px;
@@ -128,15 +130,15 @@ margin: 24px 0px;
 .button-icon:hover .icon {
   fill: rgba(251, 251, 251, 1);
 }
-.button-phone:hover {
+.button-phone-footer:hover {
   background-color: rgba(251, 251, 251, 1);
   color: rgba(12, 12, 12, 1);
 }
-.link-button {
+.link-button-footer {
   position: relative;
   display: inline-block;
 }
-.link-button::before {
+.link-button-footer::before {
   content: "";
   position: absolute;
   width: 8px;
@@ -150,7 +152,7 @@ margin: 24px 0px;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
-.link-button:hover::before  {
+.link-button-footer:hover::before  {
   opacity: 1;
 }
 @media (min-width:768px) and (max-width:1280px) {
@@ -172,7 +174,7 @@ margin: 24px 0px;
   .footer-information {
     margin-bottom: 100px;
   }
-  .link-button{
+  .link-button-footer{
     font-size: 14px;
     line-height: 18px;
   }
@@ -201,26 +203,26 @@ line-height: 18px;
 font-weight: 500;
 letter-spacing: -0.2;
   }
-  .logo {
+  .logo-footer {
     font-size: 20px;
     line-height: 1;
     letter-spacing: -0.2;
   }
-  .button-phone {
+  .button-phone-footer {
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0;
     font-weight: 500;
 
   }
-  .link-button::before {
+  .link-button-footer::before {
     bottom: 0px;
   }
   .footer {
     margin: 40px 0px;
   }
 
-  .Phone {
+  .Phone-footer {
   margin: 0px;
   }
 }
@@ -231,19 +233,19 @@ letter-spacing: -0.2;
       font-weight: 600;
       letter-spacing: -0.2;
     }
-    .logo {
+    .logo-footer {
       font-size: 20px;
       line-height: 1;
       font-weight: 500;
       letter-spacing: -0.2;
     }
-    .phone {
+    .Phone-footer {
       font-size: 14px;
       line-height: 18px;
       font-weight: 500;
       letter-spacing: 0;
     }
-    .link-button {
+    .link-button-footer {
       font-size: 14px;
       line-height: 18px;
       font-weight: 500;
@@ -262,7 +264,7 @@ letter-spacing: -0.2;
       width: 162px;
       padding: 0;
        }
-       .link-button::before {
+       .link-button-footer::before {
         bottom: 0px;
       }
       .last-text-footer {
@@ -297,12 +299,12 @@ letter-spacing: -0.2;
         margin: 28px 0px;
       }
       .footer {
-        margin: 32px 0;
+        margin: 0 auto;
       }
-      .Phone {
+      .Phone-footer {
         margin: 0px;
       }
-      .button-phone {
+      .button-phone-footer {
         width: 160px;
         height: 48px;
         font-size: 14px;
@@ -311,3 +313,6 @@ letter-spacing: -0.2;
         font-weight: 500;
       }
 }
+
+
+/* МНЕ НУЖЕН BODY С ПАДИНГОМ С НИЗУ, ДОБАВЬ ЭТО НА ОБЩЕМ */
