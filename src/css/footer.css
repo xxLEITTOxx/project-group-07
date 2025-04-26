@@ -219,9 +219,7 @@ letter-spacing: -0.2;
   .footer {
     margin: 40px 0px;
   }
-  body {
-  padding: 0px 36px;
-}
+
   .Phone {
   margin: 0px;
   }
@@ -294,9 +292,7 @@ letter-spacing: -0.2;
         top: 60%;
         transform: translate(-50%, -50%);
       }
-      body {
-        padding: 0px 36px;
-      }
+
       .line-block {
         margin: 28px 0px;
       }
