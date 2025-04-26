@@ -19,3 +19,17 @@
     padding: 0 65px;
   }
 }
+
+.common-section {
+  padding: 30px 0;
+  }
+@media only screen and (min-width: 768px) { 
+  .common-section {
+    padding: 40px 0;
+    }
+}
+@media only screen and (min-width: 1280px) {
+  .common-section {
+    padding: 50px 0;
+  }
+}
