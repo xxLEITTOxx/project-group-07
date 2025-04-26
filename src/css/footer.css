@@ -1,14 +1,4 @@
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-ul, ol {
-  margin: 0;
-  padding: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
+
 .footer {
   background-color: rgba(12, 12, 12, 1);
   width: 100%;
@@ -17,10 +7,6 @@ ul, ol {
 }
 .container {
   padding: 40px 28px;
-}
-body {
-  box-sizing: border-box;
-  margin: 0px;
 }
 .logo {
 font-family: "Gilroy";
@@ -244,4 +230,93 @@ letter-spacing: -0.2;
   .Phone {
   margin: 0px;
   }
+}
+@media (min-width:1280px) {
+    .text-txt {
+      font-size: 28px;
+      line-height: 32px;
+      font-weight: 600;
+      letter-spacing: -0.2;
+    }
+    .logo {
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: -0.2;
+    }
+    .phone {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+    .link-button {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+    .year-text {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+    .menu {
+      gap: 40px;
+    }
+    .year {
+      width: 162px;
+      padding: 0;
+       }
+       .link-button::before {
+        bottom: 0px;
+      }
+      .last-text-footer {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 500;
+        letter-spacing: -0.2;
+      }
+      .footer-opac {
+        display: flex;
+        justify-content: space-between;
+      }
+      .dop {
+        margin: 0;
+      }
+      .footer-information {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 126px;
+      }
+      .txt {
+        position: absolute;
+        width: 47%;
+        margin: 0;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+      }
+      body {
+        padding: 0px 36px;
+      }
+      .line-block {
+        margin: 28px 0px;
+      }
+      .footer {
+        margin: 32px 0;
+      }
+      .Phone {
+        margin: 0px;
+      }
+      .button-phone {
+        width: 160px;
+        height: 48px;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0;
+        font-weight: 500;
+      }
 }
