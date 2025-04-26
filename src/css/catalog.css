@@ -112,6 +112,20 @@
     width: 100%;
     height: 414px;
   }
+  .catalog-list-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #0c0c0c;
+  }
+  .catalog-list-price {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.28571;
+    letter-spacing: -0.02em;
+    color: rgba(12, 12, 12, 0.5);
+  }
 }
 @media screen and (min-width: 1280px) {
   .container {
