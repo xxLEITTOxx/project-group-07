@@ -21,7 +21,6 @@
   overflow: hidden;
 
   width: 100%;
-  margin-bottom: 40px;
 }
 .catalog-list {
   display: flex;
@@ -110,7 +109,6 @@
   .catalog-wiewport {
     max-width: 100%;
     max-height: max-content;
-    margin-bottom: 40px;
   }
   .catalog-list-item {
     max-width: 344px;
