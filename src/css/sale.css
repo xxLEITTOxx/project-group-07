@@ -16,12 +16,6 @@
     margin-bottom: 24px;
 }
 
-.sale-wrap {
-    /* display: flex; */
-}
-
-/* .sale-img-galery {} */
-
 .sale-list {
     display: flex;
     /* flex-direction: column; */
@@ -53,7 +47,6 @@
 .sale-text-wrap {
     padding: 48px 28px;
     border-radius: 30px;
-    /* height: 561px; */
     background-color: #3350e9;
 }
 
@@ -95,7 +88,6 @@
     padding: 8px 12px;
     align-items: center;
     justify-content: center;
-    display: block;
 }
 
 .sale-price-old {
@@ -105,7 +97,6 @@
     letter-spacing: -0.02em;
     text-decoration: line-through;
     color: rgba(251, 251, 251, 0.5);
-    margin-bottom: 28px;
 }
 
 .sale-product-description {
@@ -139,5 +130,88 @@
 }
 
 @media screen and (min-width: 768px) {
+    .sale {
+    
+        padding: 40px 0;
+    }
+
+    .sale-title {
+        font-size: 48px;
+        line-height: 0.91667;
+        margin-bottom: 40px;
+    }
+
+    .sale-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 40px;
+    }
+
+    .sale-list {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+
+    /* .sale-img-galery { 
+        display: flex;
+
+    } 
+       */
+    .sale-list-item {
+        max-width: 132px;
+        height: 132px;
+        border-radius: 20px;
+        padding: 16px 18px;
+    }
+
+    .sale-top-img {
+            border-radius: 50px;
+            height: 558px;
+            margin-bottom: 0;
+            padding: 80px 112px;
+        }
+
+    .sale-text-wrap {
+            padding: 60px 60px;
+            border-radius: 50px;
+        }
+        
+    .sale-product-title {
+            font-size: 32px;
+            line-height: 1.125;
+        }
+        
+    .sale-product-id {
+            line-height: 1.28571;
+            letter-spacing: -0.02em;
+        }
+        
+    .sale-price-wrap {
+            margin-bottom: 30px;
+        }
+        
+    .sale-price-current {
+            font-size: 20px;
+            line-height: 0.91;
+            width: 78px;
+        }
+        
+    .sale-product-description {
+        max-width: 584px;
+        font-size: 16px;
+        line-height: 1.25;
+        margin-bottom: 40px;
+        }
+        
+    .sale-tag-list {
+        max-width: 398px;
+        }
+        
+    .sale-tag-text {
+        font-size: 14px;
+        line-height: 1.28;
+        }
 
 }
+
