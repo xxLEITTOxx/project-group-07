@@ -1,8 +1,4 @@
 /*Mobile styles */
-.reviews-section {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
 
 .section-header {
     font-weight: 600;
@@ -26,7 +22,7 @@
 .reviews-item {
     border-radius: 30px;
     width: 335px;
-    height: 262px;
+    /*height: 262px;*/
     background-color: #f3f3f3;
 
     flex: none;
@@ -68,11 +64,6 @@
 /* Tablet styles */
 @media screen and (min-width: 768px) {
 
-    .reviews-section {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
     .section-header {
         font-size: 48px;
         line-height: 0.9;
@@ -85,7 +76,7 @@
 
     .reviews-item {
         width: calc((100% - 16px) / 2);
-        height: 272px;
+        /*height: 272px;*/
     }
 
     .review-card-title {
@@ -101,10 +92,6 @@
 
 /*Desctop styles */
 @media screen and (min-width: 1280px) {
-    .reviews-section {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
 
     .reviews-list {
         gap: 20px;
