@@ -109,6 +109,7 @@
   }
   .catalog-wiewport {
     max-width: 100%;
+    max-height: max-content;
     margin-bottom: 40px;
   }
   .catalog-list-item {
