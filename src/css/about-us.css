@@ -59,6 +59,7 @@
   line-height: 1.29;
   color: #fbfbfb;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-about:hover,
@@ -100,11 +101,13 @@
 }
 
 @media screen and (min-width: 1280px) {
+
   .img-about {
     width: 100%;
     height: auto;
     display: block;
   }
+
 
   .about-container {
     display: flex;

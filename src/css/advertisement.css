@@ -12,13 +12,7 @@
   overflow: hidden;
 }
 
-.advertisement {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.advertisement-wrap {
-  width: 335px;
+.advertisement-wrap {  
   background: #0c0c0c;
   background-image: url(../img/adverti/adverti-mob-min.png);
   background-repeat: no-repeat;
@@ -40,7 +34,6 @@
 }
 
 .advertisement-text {
-  font-family: 'Gilroy', sans-serif;
   font-weight: 600;
   font-size: 32px;
   line-height: 1;
@@ -57,7 +50,6 @@
 .advertisement-btn {
   width: 160px;
   height: 48px;
-  font-family: 'Gilroy', sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.28;
