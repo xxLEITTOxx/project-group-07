@@ -1,21 +1,318 @@
+
 .footer {
-  padding: 20px 0;
+  background-color: rgba(12, 12, 12, 1);
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  max-width: 1216px;
+  margin: 0 auto;
 }
-.footer-desc {
+.footer-container {
+  padding: 40px 28px;
+}
+.logo-footer {
+font-family: "Gilroy";
+font-weight: 500;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: -2%;
+color: rgba(251, 251, 251, 1);
+}
+.text-txt {
+  font-family: "Gilroy";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.2;
   text-align: center;
+  color: rgba(251, 251, 251, 1);
 }
-.footer-link {
+.txt{
+  margin-top: 40px;
+}
+.Phone-footer {
+  margin-top: 20px;
+}
+.meida-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.footer-information {
+  margin-bottom: 92px;
+}
+.link-button-footer {
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: rgba(251, 251, 251, 1);
+}
+.year-text{
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: rgba(251, 251, 251, 1);
+}
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.year {
+  padding-left: 49px;
+}
+.line-block {
+width: 100%;
+height: 1px;
+background-color: rgba(251, 251, 251, 0.1);
+margin: 24px 0px;
+}
+.last-text-footer {
+  font-family:"Gilroy";
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: -0.2;
+  color:rgba(251, 251, 251, 0.5) ;
+}
+.dop {
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
+}
+.icon {
+  fill: rgba(251, 251, 251, 1);
+}
+.button-icon {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: solid 1px rgba(251, 251, 251, 0.1);
+}
+.button-phone-footer{
+  font-family: "Gilroy";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: center;
+  color: rgba(251, 251, 251, 1);
+  background-color: transparent;
+  width: 152px;
+  height: 44px;
+  border: solid 1px rgba(251, 251, 251, 0.2);
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: color 0.9git pulls ease;
+  transition: background-color 0.5s ease;
+}
+.button-icon .icon {
+  fill: rgba(251, 251, 251, 0.6);
+  transition: fill 0.5s ease;
+}
+.button-icon:hover .icon {
+  fill: rgba(251, 251, 251, 1);
+}
+.button-phone-footer:hover {
+  background-color: rgba(251, 251, 251, 1);
+  color: rgba(12, 12, 12, 1);
+}
+.link-button-footer {
   position: relative;
+  display: inline-block;
 }
-.footer-link::before {
-  content: '';
+.link-button-footer::before {
+  content: "";
   position: absolute;
-  bottom: 6%;
+  width: 8px;
+  height: 8px;
+
+  background-color: rgba(51, 80, 233, 1);
+  bottom: -11px;
+  transform: translateX(-50%);
+  border-radius: 50%;
   left: 50%;
-  transform: translateX(-50%) skewX(-12deg);
-  z-index: -1;
-  width: 110%;
-  height: 24%;
-  background-color: #41d1ff;
-  transition: 200ms ease;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
+.link-button-footer:hover::before  {
+  opacity: 1;
+}
+@media (min-width:768px) and (max-width:1280px) {
+  .footer-information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .text-txt {
+  padding: 0px 50px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 32px;
+
+  }
+  .txt {
+    margin-top: 86px;
+  }
+  .footer-information {
+    margin-bottom: 100px;
+  }
+  .link-button-footer{
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .year-text {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0;
+    width: 162px;
+  }
+  .menu {
+    gap: 19px;
+  }
+  .line-block {
+    margin: 28px 0px;
+  }
+  .footer-opac {
+    display: flex;
+    justify-content: space-between;
+  }
+  .dop {
+    margin: 0px;
+  }
+  .last-text-footer {
+font-size: 14px;
+line-height: 18px;
+font-weight: 500;
+letter-spacing: -0.2;
+  }
+  .logo-footer {
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: -0.2;
+  }
+  .button-phone-footer {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0;
+    font-weight: 500;
+
+  }
+  .link-button-footer::before {
+    bottom: 0px;
+  }
+  .footer {
+    margin: 40px 0px;
+  }
+
+  .phone-footer {
+  margin: 0px;
+  }
+}
+@media (min-width:1280px) {
+    .text-txt {
+      font-size: 28px;
+      line-height: 32px;
+      font-weight: 600;
+      letter-spacing: -0.2;
+    }
+    .logo-footer {
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: -0.2;
+    }
+    .phone-footer {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+    .link-button-footer {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+    .year-text {
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+    .menu {
+      gap: 40px;
+    }
+    .year {
+      width: 162px;
+      padding: 0;
+       }
+       .link-button-footer::before {
+        bottom: 0px;
+      }
+      .last-text-footer {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 500;
+        letter-spacing: -0.2;
+      }
+      .footer-opac {
+        display: flex;
+        justify-content: space-between;
+      }
+      .dop {
+        margin: 0;
+      }
+      .footer-information {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 126px;
+      }
+      .txt {
+        position: absolute;
+        width: 47%;
+        margin: 0;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+      }
+
+      .line-block {
+        margin: 28px 0px;
+      }
+      .footer {
+        margin: 0 auto;
+      }
+      .phone-footer {
+        margin: 0px;
+      }
+      .button-phone-footer {
+        width: 160px;
+        height: 48px;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0;
+        font-weight: 500;
+      }
+}
+
+
+/* МНЕ НУЖЕН BODY С ПАДИНГОМ С НИЗУ, ДОБАВЬ ЭТО НА ОБЩЕМ */
