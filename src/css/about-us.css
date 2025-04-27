@@ -1,0 +1,122 @@
+.about-content {
+  border-radius: 30px;
+  background: #f3f3f3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 40px 20px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.about-content p:nth-of-type(1) {
+  margin-bottom: 20px;
+}
+
+.about-content p:nth-of-type(2) {
+  margin-bottom: 40px;
+}
+
+.about-title {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #0c0c0c;
+  margin-bottom: 28px;
+}
+
+.about-text {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: rgba(12, 12, 12, 0.7);
+  gap: 20px;
+}
+
+.btn-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  width: 160px;
+  height: 48px;
+  background-color: #3350e9;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #fbfbfb;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-about:hover,
+.btn-about:focus {
+  background-color: #1f3cd4;
+}
+
+.img-about-box {
+  padding: 0;
+  margin-top: 0;
+  border-radius: 30px;
+  background: rgba(12, 12, 12, 0.2), url('path_to_image');
+}
+
+.about-list {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .about-content {
+    padding: 80px 60px;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+
+  .about-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    min-width: 100%;
+  }
+
+  .about-title {
+    font-size: 48px;
+    margin: bottom 40px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .about-content {
+    width: 100%;
+    padding: 80px 60px;
+    margin-bottom: 0;
+  }
+
+  .img-about-box {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
