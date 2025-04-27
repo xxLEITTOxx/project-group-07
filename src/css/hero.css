@@ -1,14 +1,16 @@
 .hero {
+    min-width: 335px;
     padding-top: 60px;
+    padding-bottom: 30px;
+    background-color: #FFFFFF;
 }
 .hero-title {
     font-weight: 600;
     font-size: 40px;
     line-height: 0.95;
+    letter-spacing: -0.02em;
     margin-bottom: 20px;
-}
-.hero-box-content{
-    margin-bottom: 28px;
+    color: #0C0C0C;
 }
 .hero-tab-box{
     margin-bottom: 28px;
@@ -19,6 +21,7 @@
 .hero-text {
     font-weight: 500;
     font-size: 14px;
+    letter-spacing: -0.02em;
     line-height: 1.29;
     color: rgba(12, 12, 12, 0.7);
 }
@@ -27,6 +30,7 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
+    margin-bottom: 28px;
     position: relative;
 }
 .hero-foto-list {
@@ -46,7 +50,9 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 1.29;
+    letter-spacing: -0.02em;
     text-decoration: underline;
+    color: #0C0C0C;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-link:hover,
@@ -60,7 +66,9 @@
 
 @media (min-width:768px) {
     .hero {
+        min-width: 704px;
         padding-top: 80px;
+        padding-bottom: 40px;
     }
     .hero-box-content {
         display: flex;
@@ -88,6 +96,7 @@
     .hero-box {
         flex-direction: column;
         justify-content: space-between;
+        margin-bottom: 0;
     }
     .hero-link {
         font-size: 20px;
@@ -101,7 +110,8 @@
 
 @media (min-width:1280px) {
     .hero {
-        padding-top: 100px;
+        min-width: 1150px;
+        padding-bottom: 50px;
     }
     .hero-title {
         max-width: 597px;
