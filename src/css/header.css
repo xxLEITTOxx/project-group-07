@@ -81,24 +81,37 @@
 }
 
 .social-icon {
-  display: inline-block;
-  transition: background-color 0.3s ease; /* Плавный переход для фона */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #0c0c0c; /* Цвет иконки по умолчанию */
+  background-color: transparent; /* Фон по умолчанию */
+  border: 1px solid rgba(12, 12, 12, 0.1);
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  transition: background-color 0.3s ease, fill 0.3s ease; /* Плавный переход */
 }
 
-.social-icon-svg:hover,
-.social-icon-svg:focus {
-  fill: #3350e9; /* Изменяем цвет иконки при наведении */
-  transition: fill 0.3s ease; /* Плавный переход для цвета */
-  border: 1px solid rgba(51, 80, 233, 0.1); /* Легкий бордер при наведении */
+.desktop-social-list .social-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .social-icon-svg {
-  border: 1px solid rgba(12, 12, 12, 0.1);
-  border-radius: 10px;
-  padding: 8px;
-  width: 36px;
-  height: 36px;
+  width: 20px; /* Размер иконки */
+  height: 20px; /* Размер иконки */
+  transition: fill 0.3s ease; /* Плавный переход для заливки */
+}
+
+.social-icon a:hover,
+.social-icon a:focus {
+  fill: #3350e9; /* Изменяем цвет иконки при наведении */
+  transition: fill 0.3s ease; /* Плавный переход для цвета */
+  border: 1px solid rgba(51, 80, 233, 0.1); /* Легкий бордер при наведении */
 }
 
 /* Mobile/Tablet Menu Button */
