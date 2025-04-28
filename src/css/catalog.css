@@ -10,9 +10,8 @@
 .catalog-wiewport {
   width: 100%;
   width: 335px;
-  max-height: 1516px;
-  overflow: hidden;
-  margin-bottom: 40px;
+  /* max-height: 1516px;
+  overflow: hidden; */
 }
 @media (max-width: 767px) {
   /* Mobile */
@@ -30,6 +29,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  margin-bottom: 40px;
 }
 .catalog-item-wrap {
   padding: 18px 36px 18px 35px;
