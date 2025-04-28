@@ -99,6 +99,21 @@ window.addEventListener('scroll', () => {
 });
 
 
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', function (event) {
+    event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+
+    const targetId = this.getAttribute('href').substring(1); // Получаем ID секции
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth', // Плавная прокрутка
+        block: 'start', // Прокрутка к началу секции
+      });
+    }
+  });
+});
 
 
 // Находим ссылку с классом "logo"
