@@ -1,15 +1,19 @@
 .hero {
     padding-top: 60px;
 }
+.hero-box-content{
+    margin-bottom: 28px;
+}
+.hero-tab-box{
+    margin-bottom: 28px;
+}
 .hero-title {
     font-weight: 600;
     font-size: 40px;
     line-height: 0.95;
     margin-bottom: 20px;
 }
-.hero-tab-box{
-    margin-bottom: 28px;
-}
+
 .hero-title-word {
     color: #3350E9;
 }
@@ -74,7 +78,7 @@
         margin-bottom: 0px;
     }
     .hero-title {
-        max-width: 557px;
+        max-width: 567px;
         font-size: 70px;
         line-height: 0.86;
     }
@@ -92,6 +96,9 @@
     .hero-link {
         font-size: 20px;
         line-height: 1;
+    }
+    .hero-foto-list{
+        gap: 24px;
     }
     .hero-foto-icon {
         width: 56px;
@@ -111,6 +118,9 @@
     .hero-box-content {
         justify-content: space-between;
         margin-bottom: 94px;
+    }
+    .hero-foto-list {
+        gap: 26px;
     }
     .hero-foto-icon {
         width: 60px;
