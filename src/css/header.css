@@ -112,6 +112,7 @@
   fill: #3350e9; /* Изменяем цвет иконки при наведении */
   transition: fill 0.3s ease; /* Плавный переход для цвета */
   border: 1px solid rgba(51, 80, 233, 0.1); /* Легкий бордер при наведении */
+  border-radius: 10px; /* Радиус бордера */
 }
 
 /* Mobile/Tablet Menu Button */
@@ -266,14 +267,27 @@
   color: #d1d5db;
   transition: color 0.3s ease;
 }
-.mobile-social-list .social-icon-svg {
+.mobile-social-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid rgba(251, 251, 251, 0.1);
+  border-radius: 10px;
+  padding: 8px;
+  width: 36px;
+  height: 36px;
   fill: currentColor;
-  transition: fill 0.3s ease;
+}
+.social-icon-svg {
+  width: 20px; /* Размер иконки */
+  height: 20px; /* Размер иконки */
+  transition: fill 0.3s ease; /* Плавный переход для заливки */
 }
 .mobile-social-list .social-icon:hover,
 .mobile-social-list .social-icon:focus {
   color: white; /* gray-300 */
+  transition: color 0.3s ease;
+  border-radius: 10px; /* Радиус бордера */
 }
 
 /* ==========================================================================
