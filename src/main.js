@@ -98,6 +98,7 @@ window.addEventListener('scroll', () => {
   });
 });
 
+
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', function (event) {
     event.preventDefault(); // Предотвращаем стандартное поведение ссылки
@@ -114,12 +115,13 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
+
 // Находим ссылку с классом "logo"
 const logoLink = document.querySelector('.logo');
 
 // Добавляем обработчик события "click"
 logoLink.addEventListener('click', event => {
-  event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+window.location.href = '/index.html';
 
   // Убираем активный класс у всех пунктов меню
   const navLinks = document.querySelectorAll('.desktop-nav-list .nav-link');
@@ -128,3 +130,19 @@ logoLink.addEventListener('click', event => {
   // Логика для обновления состояния (если нужно)
   console.log('Logo clicked, menu state updated.');
 });
+
+// --- Логика для кнопки "Show more" в каталоге ---
+const showMoreButton = document.getElementById('show-more-catalog');
+const catalogList = document.getElementById('catalog-list');
+const catalogItems = catalogList.querySelectorAll('.catalog-list-item');
+if (showMoreButton) {
+  showMoreButton.addEventListener('click', () => {
+    // Показать все элементы каталога
+    catalogItems.forEach(item => {
+      // Используем класс для управления видимостью, чтобы не конфликтовать с медиа-запросами
+      item.classList.add('show-more-visible');
+    });
+    // Скрыть кнопку "Show more" после нажатия
+    showMoreButton.style.display = 'none';
+  });
+}

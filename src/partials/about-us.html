@@ -2,7 +2,7 @@
   <div class="container about-container">
     <div class="about-content">
       <h2 class="about-title">About Us</h2>
-      <div class="abount-text-box">
+      <div class="about-box-text">
         <p class="about-text">
           Welcome to our premium watch collection, where luxury and style meet
           functionality and precision. Our selection of timepieces embodies the
@@ -17,29 +17,25 @@
       </div>
       <a href="#catalog" class="btn-about">View catalog</a>
     </div>
-    <div class="img-about-box">
-      <picture>
-        <source
-          srcset="
-            /img/adout/about-desk-min.jpg,
-            /img/adout/about-desk@2x-min.jpg
-          "
-          media="(min-width:1280px)"
-        />
-        <source
-          srcset="/img/adout/about-tab-min.jpg, /img/adout/about-tab@2x-min.jpg"
-          media="(min-width:768px)"
-        />
-        <source
-          srcset="/img/adout/about-mob-min.jpg, /img/adout/about-mob@2x-min.jpg"
-          media="(max-width:767px)"
-        />
-        <img
-          src="/img/adout/about-desk-min.jpg"
-          alt="Black wristwatch"
-          class="img-about"
-        />
-      </picture>
-    </div>
+
+    <picture class="img-about-box">
+      <source
+        srcset="/img/adout/about-desk-min.jpg 1x, /img/adout/about-desk@2x-min.jpg 2x"
+        media="(min-width:1280px)"
+      />
+      <source
+        srcset="/img/adout/about-tab-min.jpg 1x, /img/adout/about-tab@2x-min.jpg 2x"
+        media="(min-width:768px)"
+      />
+      <source
+        srcset="/img/adout/about-mob-min.jpg 1x, /img/adout/about-mob@2x-min.jpg 2x"
+        media="(max-width:767px)"
+      />
+      <img
+        src="/img/adout/about-mob-min.jpg"
+        alt="Black wristwatch"
+        class="img-about"
+      />
+    </picture>
   </div>
 </section>
