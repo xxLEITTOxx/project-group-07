@@ -10,9 +10,22 @@
 .catalog-wiewport {
   width: 100%;
   width: 335px;
-  max-height: 1516px;
-  overflow: hidden;
+  /* max-height: 1516px;
+  overflow: hidden; */
+
   margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  /* Mobile */
+  .catalog-list-item:nth-child(n + 5) {
+    display: none;
+  } /* Скрываем все после 4-го */
+  .catalog-list-item.show-more-visible {
+    display: flex !important;
+  } /* Показываем при клике на Show More */
+  #show-more-catalog {
+    display: flex;
+  } /* Показываем кнопку на мобильных */
 }
 .catalog-list {
   display: flex;
@@ -40,6 +53,9 @@
   line-height: 1.25;
   letter-spacing: -0.02em;
   color: #0c0c0c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-bottom: 8px;
 }
 .catalog-list-price {
@@ -105,9 +121,6 @@
     line-height: 1;
     letter-spacing: -0.02em;
     color: #0c0c0c;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
   .catalog-list-price {
     font-weight: 400;

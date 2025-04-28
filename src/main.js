@@ -87,3 +87,19 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// --- Логика для кнопки "Show more" в каталоге ---
+const showMoreButton = document.getElementById('show-more-catalog');
+const catalogList = document.getElementById('catalog-list');
+const catalogItems = catalogList.querySelectorAll('.catalog-list-item');
+if (showMoreButton) {
+  showMoreButton.addEventListener('click', () => {
+    // Показать все элементы каталога
+    catalogItems.forEach(item => {
+      // Используем класс для управления видимостью, чтобы не конфликтовать с медиа-запросами
+      item.classList.add('show-more-visible');
+    });
+    // Скрыть кнопку "Show more" после нажатия
+    showMoreButton.style.display = 'none';
+  });
+}
