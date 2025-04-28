@@ -41,9 +41,6 @@
 
 .about-box-text {
   gap: 20px;
-}
-
-.about-text:last-of-type {
   margin-bottom: 40px;
 }
 
@@ -53,7 +50,7 @@
   justify-content: center;
   border-radius: 16px;
   width: 160px;
-  height: 48px;
+  min-height: 48px;
   background-color: #3350e9;
   font-family: 'Gilroy', sans-serif;
   font-weight: 500;
@@ -87,13 +84,9 @@
     margin-top: 0;
   }
 
-  .about-text:last-of-type {
+  .about-box-text {
     margin-bottom: 60px;
   }
-
-  /* .abount-text-box {
-    margin-bottom: 60px;
-  } */
 
   .about-title {
     font-size: 48px;
@@ -124,13 +117,13 @@
     margin: bottom 40px;
   }
 
+  .about-box-text {
+    margin-bottom: 40px;
+  }
+
   .about-text {
     font-size: 16px;
     line-height: 1.25;
-  }
-
-  .about-text:last-of-type {
-    margin-bottom: 20px;
   }
 
   .about-content {
