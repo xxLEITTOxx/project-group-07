@@ -9,7 +9,7 @@
 }
 .catalog-wiewport {
   width: 100%;
-  width: 335px;
+/*   width: 335px; */
   max-height: 1516px;
   overflow: hidden;
   margin-bottom: 40px;
