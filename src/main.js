@@ -9,6 +9,16 @@ function closeMenu() {
   document.body.style.overflow = ''; // Восстановить прокрутку body
 }
 
+// Функция для закрытия мобильного меню при изменении разрешения
+function closeMobileMenuOnResize() {
+  if (window.innerWidth >= 1280) {
+    // Убираем класс "is-open", если ширина экрана >= 1280px
+    mobileMenu.classList.remove('is-open');
+  }
+}
+// Добавляем обработчик события "resize"
+window.addEventListener('resize', closeMobileMenuOnResize);
+
 // Открыть меню
 menuToggle.addEventListener('click', () => {
   mobileMenu.classList.add('is-open');
@@ -86,6 +96,24 @@ window.addEventListener('scroll', () => {
       }
     }
   });
+});
+
+
+
+
+// Находим ссылку с классом "logo"
+const logoLink = document.querySelector('.logo');
+
+// Добавляем обработчик события "click"
+logoLink.addEventListener('click', event => {
+window.location.href = '/index.html';
+
+  // Убираем активный класс у всех пунктов меню
+  const navLinks = document.querySelectorAll('.desktop-nav-list .nav-link');
+  navLinks.forEach(link => link.classList.remove('active'));
+
+  // Логика для обновления состояния (если нужно)
+  console.log('Logo clicked, menu state updated.');
 });
 
 // --- Логика для кнопки "Show more" в каталоге ---

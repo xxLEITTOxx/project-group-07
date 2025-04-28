@@ -57,15 +57,21 @@
     font-size: 14px;
     line-height: 1.29;
     color: #0c0c0c;
-    margin-bottom: 18px;
     outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input-wrap {
+    margin-bottom: 18px;
+}
+
+.user-comment-wrap {
+    margin-bottom: 28px;
 }
 
 .main-form-user-comment {
     padding: 12px 14px;
     height: 84px;
-    margin-bottom: 28px;
     resize: none;
 }
 
@@ -77,6 +83,14 @@
 .main-form-input:focus-within, 
 .main-form-user-comment:focus-within {
     border-color: #3350e9;
+}
+
+.main-form-input:not(:placeholder-shown):invalid {
+    border-color: lightcoral;
+}
+
+.main-form-input:not(:placeholder-shown):valid {
+    border-color: lightgreen;
 }
 
 .main-form-btn {
@@ -96,7 +110,8 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.main-form-btn:hover {
+.main-form-btn:hover, 
+.main-form-btn:focus {
     background-color: #1f3cd4;
 }
 
@@ -143,10 +158,13 @@
         line-height: 1.25;
     }
 
+    .user-comment-wrap {
+        margin-bottom: 32px;
+    }
+
     .main-form-user-comment {
         padding: 16px;
         height: 90px;
-        margin-bottom: 32px;
     }
 
     .main-form-btn {

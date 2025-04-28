@@ -1,4 +1,6 @@
-
+footer {
+  padding: 20px;
+}
 .footer {
   background-color: rgba(12, 12, 12, 1);
   width: 100%;
@@ -30,7 +32,7 @@ color: rgba(251, 251, 251, 1);
 .txt{
   margin-top: 40px;
 }
-.Phone-footer {
+.phone-footer {
   margin-top: 20px;
 }
 .meida-social {
@@ -57,19 +59,19 @@ color: rgba(251, 251, 251, 1);
   line-height: 16px;
   letter-spacing: 0;
   color: rgba(251, 251, 251, 1);
+width: 83px;
 }
 .footer-menu {
   display: flex;
   justify-content: space-between;
+  gap: 49px;
 }
 .menu {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 8px 16px;
 }
-.year {
-  padding-left: 49px;
-}
+
 .line-block {
 width: 100%;
 height: 1px;
@@ -102,6 +104,9 @@ margin: 24px 0px;
   height: 34px;
   border-radius: 10px;
   border: solid 1px rgba(251, 251, 251, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .button-phone-footer{
   font-family: "Gilroy";
@@ -152,7 +157,7 @@ margin: 24px 0px;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
-.link-button-footer:hover::before  {
+.link-button-footer:focus::before  {
   opacity: 1;
 }
 @media (min-width:768px) and (max-width:1280px) {
@@ -160,6 +165,9 @@ margin: 24px 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+  footer {
+    padding: 32px;
   }
   .text-txt {
   padding: 0px 50px;
@@ -213,15 +221,13 @@ letter-spacing: -0.2;
     line-height: 18px;
     letter-spacing: 0;
     font-weight: 500;
-
+    width: auto;
+    height: 48px;
+    padding: 15px;
   }
   .link-button-footer::before {
     bottom: 0px;
   }
-  .footer {
-    margin: 40px 0px;
-  }
-
   .phone-footer {
   margin: 0px;
   }
@@ -247,15 +253,17 @@ letter-spacing: -0.2;
     }
     .link-button-footer {
       font-size: 14px;
-      line-height: 18px;
       font-weight: 500;
       letter-spacing: 0;
+      line-height: 1.29;
+      text-align: center;
     }
     .year-text {
       font-size: 14px;
       line-height: 18px;
       font-weight: 500;
       letter-spacing: 0;
+      width: 162px;
     }
     .menu {
       gap: 40px;
