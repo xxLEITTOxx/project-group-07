@@ -98,7 +98,6 @@ window.addEventListener('scroll', () => {
   });
 });
 
-
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', function (event) {
     event.preventDefault(); // Предотвращаем стандартное поведение ссылки
@@ -115,13 +114,12 @@ document.querySelectorAll('.nav-link').forEach(link => {
   });
 });
 
-
 // Находим ссылку с классом "logo"
 const logoLink = document.querySelector('.logo');
 
 // Добавляем обработчик события "click"
 logoLink.addEventListener('click', event => {
-window.location.href = '/index.html';
+  window.location.href = './index.html';
 
   // Убираем активный класс у всех пунктов меню
   const navLinks = document.querySelectorAll('.desktop-nav-list .nav-link');
@@ -146,3 +144,68 @@ if (showMoreButton) {
     showMoreButton.style.display = 'none';
   });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Находим элементы
+  const saleList = document.querySelector('.sale-list');
+  const mainPicture = document.getElementById('main-picture'); // Используем ID для точности
+  const mainImage = mainPicture?.querySelector('.sale-main-img'); // Ищем внутри picture
+  const listItems = document.querySelectorAll('.sale-list-item');
+
+  // Проверяем, найдены ли все необходимые элементы
+  if (!saleList || !mainPicture || !mainImage) {
+    console.error(
+      'Не удалось найти необходимые элементы галереи: saleList, main-picture или sale-main-img.'
+    );
+    return; // Прекращаем выполнение
+  }
+
+  // Добавляем обработчик событий на весь список (делегирование событий)
+  saleList.addEventListener('click', function (event) {
+    // Находим ближайший родительский элемент 'li'
+    const listItem = event.target.closest('.sale-list-item');
+
+    // Если клик был не по элементу списка или его содержимому, выходим
+    if (!listItem) {
+      return;
+    }
+
+    // Находим изображение миниатюры внутри элемента списка
+    const thumbnailImage = listItem.querySelector('.sale-img');
+
+    // Проверяем наличие миниатюры и необходимых data-атрибутов
+    if (!thumbnailImage || !thumbnailImage.dataset.largeSrc) {
+      console.warn(
+        'Кликнутое изображение миниатюры не найдено или отсутствует data-large-src.'
+      );
+      return;
+    }
+
+    // --- Получаем данные из миниатюры ---
+    const largeSrc = thumbnailImage.dataset.largeSrc;
+    // Используем largeSrc по умолчанию для srcset, если data-large-srcset нет
+    const largeSrcset = thumbnailImage.dataset.largeSrcset || largeSrc;
+    // ВОЗВРАЩАЕМ ПОЛУЧЕНИЕ И ПАРСИНГ sourcesData
+    let sourcesData = [];
+    try {
+      // Пытаемся распарсить JSON из data-sources. Если его нет или он некорректный, будет пустой массив.
+      sourcesData = JSON.parse(thumbnailImage.dataset.sources || '[]');
+    } catch (e) {
+      console.error('Ошибка парсинга JSON из data-sources:', e);
+      // Оставляем sourcesData пустым массивом
+    }
+
+    // --- Обновляем основное изображение (<img>) ---
+    mainImage.src = largeSrc;
+    mainImage.srcset = largeSrcset; // Обновляем srcset основного img
+
+    // --- ВОЗВРАЩАЕМ ОБНОВЛЕНИЕ <source> внутри основного <picture> ---
+    const mainSources = mainPicture.querySelectorAll('source');
+
+    // Удаляем старые source элементы, чтобы избежать дублирования
+    mainSources.forEach(source => source.remove());
+    // --- Управление активным классом для визуального выделения ---
+    listItems.forEach(item => item.classList.remove('active'));
+    listItem.classList.add('active');
+  });
+});
