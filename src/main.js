@@ -119,7 +119,7 @@ const logoLink = document.querySelector('.logo');
 
 // Добавляем обработчик события "click"
 logoLink.addEventListener('click', event => {
-  window.location.href = '/index.html';
+  window.location.href = './index.html';
 
   // Убираем активный класс у всех пунктов меню
   const navLinks = document.querySelectorAll('.desktop-nav-list .nav-link');
@@ -204,7 +204,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Удаляем старые source элементы, чтобы избежать дублирования
     mainSources.forEach(source => source.remove());
-
     // --- Управление активным классом для визуального выделения ---
     listItems.forEach(item => item.classList.remove('active'));
     listItem.classList.add('active');

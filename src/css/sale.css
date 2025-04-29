@@ -52,7 +52,7 @@
 
 /* Убираем фикс. размеры с picture, flex сделает свое дело */
 .sale-top-img picture {
-  display: flex; /* Чтобы внутренний img мог центрироваться */
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 235px;
@@ -61,12 +61,12 @@
 
 /* Стили для самого изображения */
 .sale-main-img {
-  display: block; /* Убираем лишние отступы */
-  max-width: 100%; /* Не шире контейнера picture */
-  max-height: 100%; /* Не выше контейнера picture */
-  width: auto; /* Ширина подстраивается */
-  height: auto; /* Высота подстраивается */
-  object-fit: contain; /* Масштабирует изображение, сохраняя пропорции */
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .sale-text-wrap {
