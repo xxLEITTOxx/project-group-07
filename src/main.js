@@ -145,6 +145,25 @@ if (showMoreButton) {
   });
 }
 
+import saleMobTab1 from './img/sale/sale-mob-tab-1.png';
+import saleMobTab2 from './img/sale/sale-mob-tab-2.png';
+import saleMobTab3 from './img/sale/sale-mob-tab-3.png';
+import saleMobTab4 from './img/sale/sale-mob-tab-4.png';
+
+// Массив данных для миниатюр и больших изображений
+const sourcesData = [
+  { thumbnail: saleMobTab1, large: saleMobTab1 },
+  { thumbnail: saleMobTab2, large: saleMobTab2 },
+  { thumbnail: saleMobTab3, large: saleMobTab3 },
+  { thumbnail: saleMobTab4, large: saleMobTab4 },
+];
+
+// Устанавливаем изображения для миниатюр
+document.querySelectorAll('.sale-list-item img').forEach((img, index) => {
+  img.src = sourcesData[index].thumbnail; // Устанавливаем миниатюру
+  img.setAttribute('data-large-src', sourcesData[index].large); // Устанавливаем большое изображение
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   // Находим элементы
   const saleList = document.querySelector('.sale-list');
