@@ -11,13 +11,14 @@ function closeMenu() {
 function closeMobileMenuOnResize() {
   if (window.innerWidth >= 1280) {
     mobileMenu.classList.remove('is-open');
+    document.body.style.overflow = '';
   }
 }
 window.addEventListener('resize', closeMobileMenuOnResize);
 
 menuToggle.addEventListener('click', () => {
   mobileMenu.classList.add('is-open');
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden'; // 'hidden' Блокируем прокрутку;
 });
 
 menuClose.addEventListener('click', closeMenu);
